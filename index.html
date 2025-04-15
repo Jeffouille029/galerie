@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+    }
+    .swiper {
+      height: 100vh;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+    .swiper-slide img,
+    .swiper-slide video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Médias à insérer ici -->
+      <div class="swiper-slide"><img src="media/photo1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="media/photo2.jpg" alt=""></div>
+      <div class="swiper-slide"><video src="media/video1.mp4" controls></video></div>
+      <!-- Ajoute le reste ici -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: false,
+      spaceBetween: 10,
+    });
+  </script>
+</body>
+</html>
